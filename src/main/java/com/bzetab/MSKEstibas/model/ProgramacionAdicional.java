@@ -27,6 +27,6 @@ public class ProgramacionAdicional {
     @MapsId("idtipoadicional")
     @JoinColumn(name = "idtipoadicional")
     @JsonBackReference
-    private Tipoadicional tipoadicional;
+    private TipoAdicional tipoadicional;
 
 }
