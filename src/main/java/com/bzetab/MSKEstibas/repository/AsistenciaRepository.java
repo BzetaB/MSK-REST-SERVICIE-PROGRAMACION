@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AsistenciaRepository
         extends JpaRepository<Asistencia, Integer> {
+    Asistencia findByPuntualidad(boolean puntualidad);
 }
