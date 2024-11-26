@@ -39,11 +39,11 @@ public class TipoAdicionalService implements TipoAdicionalImp{
     }
 
     @Override
-    public String eliminarTipoAdicional(TipoAdicional tipoAdicional) {
-        if(tipoAdicionalRepository.existsById(tipoAdicional.getIdtipoadicional())){
-            tipoAdicionalRepository.deleteById(tipoAdicional.getIdtipoadicional());
+    public String eliminarTipoAdicional(int idtipoadicional) {
+        if(tipoAdicionalRepository.existsById(idtipoadicional)){
+            tipoAdicionalRepository.deleteById(idtipoadicional);
             return "Tipo Adicional eliminado";
         }
-        return "El tipo de adicional no se puede eliminar porque no se encuentra el ID -> "+tipoAdicional.getIdtipoadicional() + ".";
+        return "El tipo de adicional no se puede eliminar porque no se encuentra el ID -> "+ idtipoadicional+ ".";
     }
 }

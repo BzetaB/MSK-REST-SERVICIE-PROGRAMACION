@@ -11,5 +11,5 @@ public interface EstibaImp {
     List<Estiba> listarEstibas();
     Estiba guardarEstiba(Estiba estiba);
     Estiba actualizarEstiba(Estiba estiba);
-    String eliminarEstiba(Estiba estiba);
+    String eliminarEstiba(int idestiba);
 }

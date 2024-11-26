@@ -10,5 +10,5 @@ public interface TipoAdicionalImp {
     List<TipoAdicional> listarTipoAdicional();
     TipoAdicional guardarTipoAdicional(TipoAdicional tipoAdicional);
     TipoAdicional actualizarTipoAdicional(TipoAdicional tipoAdicional);
-    String eliminarTipoAdicional(TipoAdicional tipoAdicional);
+    String eliminarTipoAdicional(int idtipoadicional);
 }

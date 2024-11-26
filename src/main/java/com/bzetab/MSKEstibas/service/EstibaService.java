@@ -50,11 +50,11 @@ public class EstibaService implements EstibaImp{
     }
 
     @Override
-    public String eliminarEstiba(Estiba estiba) {
-        if (estibaRepository.existsById(estiba.getIdestiba())) {
-            estibaRepository.deleteById(estiba.getIdestiba());
+    public String eliminarEstiba(int idestiba) {
+        if (estibaRepository.existsById(idestiba)) {
+            estibaRepository.deleteById(idestiba);
             return "Estiba eliminada";
         }
-        return "No se encontró el estiba con el ID -> " + estiba.getIdestiba()+".";
+        return "No se encontró el estiba con el ID -> " + idestiba+".";
     }
 }

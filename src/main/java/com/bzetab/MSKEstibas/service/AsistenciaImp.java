@@ -10,5 +10,5 @@ public interface AsistenciaImp {
     List<Asistencia> listarAsistencias();
     Asistencia guardarAsistencia(Asistencia asistencia);
     Asistencia actualizarAsistencia(Asistencia asistencia);
-    String eliminarAsistencia(Asistencia asistencia);
+    String eliminarAsistencia(int idasistencia);
 }
