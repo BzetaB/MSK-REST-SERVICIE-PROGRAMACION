@@ -6,7 +6,6 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.Date;
 @Getter
 @Setter
@@ -36,4 +35,10 @@ public class Programacion {
     private BigDecimal pagobase;
     @Column(name = "estado", nullable = false)
     private boolean estado;
+
+    @ManyToOne
+    @JoinColumn(name="idestiba")
+    private Estiba estiba;
+
+
 }

@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TipoAdicionalRepository
         extends JpaRepository<TipoAdicional, Integer> {
+    TipoAdicional findByDescripcion(String descripcion);
 }

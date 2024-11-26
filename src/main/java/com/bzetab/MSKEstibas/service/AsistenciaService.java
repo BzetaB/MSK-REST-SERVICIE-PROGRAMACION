@@ -42,12 +42,12 @@ public class AsistenciaService implements AsistenciaImp {
     }
 
     @Override
-    public String eliminarAsistencia(Asistencia asistencia) {
-        if(asistenciaRepository.existsById(asistencia.getIdasistencia())) {
-            asistenciaRepository.deleteById(asistencia.getIdasistencia());
+    public String eliminarAsistencia(int idasistencia) {
+        if(asistenciaRepository.existsById(idasistencia)) {
+            asistenciaRepository.deleteById(idasistencia);
             return "Registro eliminado";
         }else{
-            throw new RuntimeException("No se puede eliminar el registro porque no se encuentra el ID -> " + asistencia.getIdasistencia() + ".");
+            throw new RuntimeException("No se puede eliminar el registro porque no se encuentra el ID -> " + idasistencia + ".");
         }
     }
 }

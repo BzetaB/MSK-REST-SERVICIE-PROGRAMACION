@@ -16,6 +16,8 @@ public class Estiba {
     private boolean documento;
     @Column(name = "nrodocumento", nullable = false, unique = true)
     private String nrodocumento;
+    @Column(name = "contrasenia", nullable = false)
+    private String contrasenia;
     @Column(name = "nombre", nullable = false)
     private String nombre;
     @Column(name = "apellido", nullable = false)
@@ -24,4 +26,5 @@ public class Estiba {
     private int edad;
     @Column(name = "telefono",nullable = false)
     private String telefono;
+
 }

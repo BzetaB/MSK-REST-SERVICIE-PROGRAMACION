@@ -18,5 +18,7 @@ public class Asistencia {
     @Column(name = "puntualidad", nullable = false)
     private boolean puntualidad;
 
-
+    @ManyToOne
+    @JoinColumn(name="idprogramacion")
+    private Programacion programacion;
 }
