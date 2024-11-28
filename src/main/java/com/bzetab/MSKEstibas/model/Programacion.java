@@ -35,4 +35,8 @@ public class Programacion {
     private BigDecimal pagobase;
     @Column(name = "estado", nullable = false)
     private boolean estado;
+
+    @ManyToOne
+    @JoinColumn(name="idestiba")
+    private Estiba estiba;
 }

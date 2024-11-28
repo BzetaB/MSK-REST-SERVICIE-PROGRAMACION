@@ -33,7 +33,7 @@ public class TipoAdicionalService implements TipoAdicionalImp{
 
     @Override
     public TipoAdicional actualizarTipoAdicional(TipoAdicional tipoAdicional) {
-        TipoAdicional updateTipoAdicional = obtenerTipoAdicionalPorID(tipoAdicional.getIdtipoadicional());
+        TipoAdicional updateTipoAdicional = this.obtenerTipoAdicionalPorID(tipoAdicional.getIdtipoadicional());
         updateTipoAdicional.setDescripcion(tipoAdicional.getDescripcion());
         return tipoAdicionalRepository.save(updateTipoAdicional);
     }

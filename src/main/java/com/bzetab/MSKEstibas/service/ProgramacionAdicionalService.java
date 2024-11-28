@@ -4,6 +4,7 @@ import com.bzetab.MSKEstibas.model.Programacion;
 import com.bzetab.MSKEstibas.model.ProgramacionAdicional;
 import com.bzetab.MSKEstibas.model.pk.ProgramacionAdicionalID;
 import com.bzetab.MSKEstibas.repository.ProgramacionAdicionalRepository;
+import com.bzetab.MSKEstibas.repository.ProgramacionRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.util.NoSuchElementException;
 public class ProgramacionAdicionalService implements ProgramacionAdicionalImp{
 
     private ProgramacionAdicionalRepository programacionAdicionalRepository;
+    private ProgramacionRepository programacionRepository;
 
     @Override
     public ProgramacionAdicional asignarAdicionalAProgramacion(ProgramacionAdicional programacionAdicional) {
