@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 @Getter
 @Setter
@@ -15,9 +16,9 @@ public class Quincena {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idquincena;
     @Column(name = "diainicio", nullable = false)
-    private Date diainicio;
+    private LocalDate diainicio;
     @Column(name = "diafin", nullable = false)
-    private Date diafin;
+    private LocalDate diafin;
     @Column(name = "totalganado")
     private BigDecimal totalganado;
 }

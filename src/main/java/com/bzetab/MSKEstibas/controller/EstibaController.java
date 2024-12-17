@@ -1,6 +1,7 @@
 package com.bzetab.MSKEstibas.controller;
 
 import com.bzetab.MSKEstibas.model.Estiba;
+import com.bzetab.MSKEstibas.model.dto.RespuestaGeneral;
 import com.bzetab.MSKEstibas.service.EstibaImp;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/estiba")
+@RequestMapping("/wsmskestiba/estiba")
 public class EstibaController {
     private EstibaImp estibaImp;
 
@@ -40,9 +41,16 @@ public class EstibaController {
     }
 
     @PostMapping
-    public ResponseEntity<Estiba>insertarEstiba(@RequestBody Estiba estiba){
-        Estiba nuevoEstiba = estibaImp.guardarEstiba(estiba);
-        return ResponseEntity.ok(nuevoEstiba);
+    public ResponseEntity<RespuestaGeneral>insertarEstiba(@RequestBody Estiba estiba){
+        String mensaje = "Estiba registrado correctamente";
+        boolean resultado = true;
+        try{
+            estibaImp.guardarEstiba(estiba);
+        }catch(Exception ex){
+            mensaje = "Error: Ocurrio un error al conectarse a la BD";
+            resultado = false;
+        }
+        return ResponseEntity.ok(RespuestaGeneral.builder().respuesta(resultado).mensaje(mensaje).build());
     }
 
     @PutMapping("/{idestiba}")

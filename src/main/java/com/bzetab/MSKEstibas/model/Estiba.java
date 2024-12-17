@@ -11,7 +11,7 @@ import lombok.Setter;
 public class Estiba {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idestiba;
+    private Integer idestiba;
     @Column(name = "documento", nullable = false)
     private boolean documento;
     @Column(name = "nrodocumento", nullable = false, unique = true)
@@ -23,7 +23,7 @@ public class Estiba {
     @Column(name = "apellido", nullable = false)
     private String apellido;
     @Column(name = "edad", nullable = false)
-    private int edad;
+    private Integer edad;
     @Column(name = "telefono",nullable = false)
     private String telefono;
 }

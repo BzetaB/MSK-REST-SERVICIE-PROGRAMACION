@@ -9,6 +9,5 @@ import java.util.List;
 @Repository
 public interface ProgramacionRepository
         extends JpaRepository<Programacion, Integer> {
-    List<Programacion> findAllByEstiba_Idestiba(int idestiba);
     List<Programacion> findAllByEstiba_Nrodocumento(String nrodocumento);
 }
