@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/programacion")
+@RequestMapping("/wsmskestiba/programacion")
 @AllArgsConstructor
 public class ProgramacionController {
 
